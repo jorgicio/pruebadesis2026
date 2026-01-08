@@ -6,7 +6,15 @@ Ambiente utilizado:
 - Versión de PHP: 8.3
 - Motor de HTML: Nginx 1.24.0
 
-Las consultas requeridas para levantar la base de datos se encuentran en la carpeta sql, en el archivo queries.sql.
+Las consultas requeridas para levantar la base de datos se encuentran en la carpeta sql.
+Existen dos archivos: 
+- createuser.sql, el cual contiene las queries que deben ser usadas por el usuario administrador de postgres
+ (comúnmente se llama postgres y no suele tener contraseña)
+- queries.sql, el cual requiere que el nuevo usuario ya tenga los permisos especificados en el archivo anterior.
+
+Si tienen problemas, pueden usar el mismo usuario postgres, crear la base de datos pruebadesis2026 y ejecutar las
+queries del archivo queries.sql desde ahí.
+Si quieren algo más gráfico, una mejor opción es DBeaver.
 
 
 Instrucciones para levantar el entorno:

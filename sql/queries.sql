@@ -1,7 +1,4 @@
-CREATE database pruebadesis2026;
-
-CREATE USER mint WITH ENCRYPTED PASSWORD 'linuxmint2026';
-
+-- Importante: Deben haber usado los comandos en el archivo createuser.sql antes de usar estas queries.
 CREATE TABLE monedas (
 	id_moneda SERIAL PRIMARY KEY,
 	nombre VARCHAR(100) NOT NULL,
