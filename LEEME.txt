@@ -35,3 +35,6 @@ Luego, damos permisos para que el usuario pueda escribir en la carpeta en cuesti
 sudo chown -R $USER:www-data /var/www/html
 
 Ahora abrimos un navegador, y simplemente escribimos la url http://localhost, y la página debería poder verse.
+
+- Respecto a las credenciales de la base de datos, éstas también se encuentran en el archivo credenciales.ini,
+el cual es leído por el archivo loadcredentials.php que carga la información para conectarse a la base de datos.
