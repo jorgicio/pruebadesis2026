@@ -46,3 +46,5 @@ Ahora abrimos un navegador, y simplemente escribimos la url http://localhost, y 
 
 - Respecto a las credenciales de la base de datos, éstas también se encuentran en el archivo credenciales.ini,
 el cual es leído por el archivo loadcredentials.php que carga la información para conectarse a la base de datos.
+Si necesita usar otras credenciales como las predeterminadas tras la instalación de Postgres, puede modificar el
+archivo credenciales.ini si lo desea.
