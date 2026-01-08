@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Prueba Diagnóstico Desis 2026</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+           <header>
+            <h1>Formulario de Producto</h1>
+           </header>
+           <form id="form">
+                <div id="panels">
+
+                    <div class="campo">
+                       <label for="codigo">Código</label> 
+                        <input type="text" name="codigo" id="codigo" class="required"> 
+                    </div>
+                    
+                    <div class="campo">
+                       <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="required"> 
+                    </div>
+
+                    <div class="campo">
+                       <label for="bodega">Bodega</label> 
+                        <select id="bodega" name="bodega" id="bodega" class="required">
+                            <option value=""></option>
+                        </select> 
+                    </div>    
+                        
+                    <div class="campo">
+                       <label for="sucursal">Sucursal</label> 
+                        <select id="sucursal" name="sucursal" id="sucursal" class="required" disabled>
+                            <option value=""></option>
+                        </select> 
+                    </div>
+                    
+                    <div class="campo">
+                       <label for="moneda">Moneda</label>
+                        <select id="moneda" name="moneda" id="moneda" class="required">
+                            <option value=""></option>
+                        </select>  
+                    </div>
+
+                    <div class="campo">
+                       <label for="precio">Precio</label> 
+                        <input type="text" name="precio" id="precio" class="required"> 
+                    </div>
+
+                </div>
+
+                <div id="checkboxes-wrapper" class="bigblock">
+                    <label for="materiales[]">Material del Producto</label>
+                    <div id="checkboxes">
+                        <input type="checkbox" name="materiales[]" value="plastico" /> Plástico
+                        <input type="checkbox" name="materiales[]" value="metal" /> Metal
+                        <input type="checkbox" name="materiales[]" value="madera" /> Madera
+                        <input type="checkbox" name="materiales[]" value="vidrio" /> Vidrio
+                        <input type="checkbox" name="materiales[]" value="textil" /> Textil  
+                    </div>
+                    
+                </div>
+
+                <div id="descripcionblock" class="bigblock">
+                    <label for="descripcion">Descripción</label> 
+                    <textarea name="descripcion" id="descripcion" rows="10" class="required"></textarea>
+                </div>
+                
+                <div id="button">
+                    <button id="guardar" name="guardar" type="submit">Guardar Producto</button>
+                </div>
+            </form>
+        </div>
+        <script src="js/loadData.js"></script>
+        <script src="js/submit.js"></script>
+        <script src="js/validate.js"></script>
+    </body>
+</html>
+
+
+    

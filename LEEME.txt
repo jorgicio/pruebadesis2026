@@ -1,0 +1,37 @@
+Prueba Desis 2026
+
+Ambiente utilizado:
+- Sistema Operativo: Linux Mint 22.2
+- Versión de PostgreSQL: 16.11
+- Versión de PHP: 8.3
+- Motor de HTML: Nginx 1.24.0
+
+Las consultas requeridas para levantar la base de datos se encuentran en la carpeta sql, en el archivo queries.sql.
+
+
+Instrucciones para levantar el entorno:
+
+- Instalar los programas anteriormente señalados, de preferencia en esas versiones, 
+aunque en versiones recientes no debería dar problemas.
+- Si usas Ubuntu/Debian y derivados, se debe hacer con estos comandos:
+
+sudo apt install nginx php-fpm php-cli php-common php-mbstring 
+php-xml php-zip php-curl php-gd php-intl php-pgsql php-pdo-pgsql php-json postgresql postgresql-contrib
+
+- Configurar todo lo anterior. Las instrucciones pueden variar dependiendo del sistema operativo.
+
+- Copiar los archivos del proyecto en un directorio previamente configurado para que sea leído por Nginx.
+Comúnmente el directorio suele ser /var/www/html, pero se puede configurar por otro si se desea.
+
+- Si hay problemas con permisos y usas Linux, es mejor ajustar los permisos de usuario.
+Primero: agregar a nuestro usuario al grupo www-data:
+
+sudo usermod -a -G www-data $USER
+
+Luego reiniciar sesión para guardar los cambios.
+
+Luego, damos permisos para que el usuario pueda escribir en la carpeta en cuestión.
+
+sudo chown -R $USER:www-data /var/www/html
+
+Ahora abrimos un navegador, y simplemente escribimos la url http://localhost, y la página debería poder verse.
