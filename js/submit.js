@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function(){
             .then(data => {
                 if(data.status === "success") {
                     alert("Datos ingresados con éxito");
+                    this.reset();
+                    setTimeout(() => {
+                       location.reload(); 
+                    }, 1000);
                 } else if (data.status === "error") {
                     alert(`Hubo un error al ingresar el registro en la base de datos: ${data.message}`);
                 }

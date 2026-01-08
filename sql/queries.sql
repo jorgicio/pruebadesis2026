@@ -61,6 +61,3 @@ create table productos(
 	foreign key (id_bodega) references bodegas(id_bodega),
 	foreign key (id_sucursal) references sucursales(id_sucursal)
 );
-
-
-
